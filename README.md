@@ -76,12 +76,12 @@ RPLIDAR public SDK includes some simple demos to do fast evaulation:
 
 This demo application simply connects to an RPLIDAR device and outputs the scan data to the console.
 
-    ultra_simple <serial_port_device>
+    ultra_simple --channel --serial <serial_port_device> <baudrate>
 
 For instance:
 
-    ultra_simple \\.\COM11  # on Windows
-    ultra_simple /dev/ttyUSB0
+    ultra_simple --channel --serial \\.\COM11  # on Windows
+    ultra_simple --channel --serial /dev/ttyUSB0 115200
 
 > Note: Usually you need root privilege to access tty devices under Linux. To eliminate this limitation, please add `KERNEL=="ttyUSB*", MODE="0666"` to the configuration of udev, and reboot.
 
